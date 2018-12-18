@@ -9,7 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBAction func btnLogin(_ sender: Any) {
+        saveToken(token: "SADIUH127863")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
