@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="qq6-KH-9Xr">
             <objects>
-                <viewController storyboardIdentifier="LoginStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gif-9F-IeI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gif-9F-IeI" customClass="ViewController" customModule="EstudoiOs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T2O-W4-9qN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,9 @@
                                     <constraint firstAttribute="width" constant="38" id="7Bx-Il-mlB"/>
                                 </constraints>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="btn_login:" destination="Gif-9F-IeI" eventType="touchUpInside" id="VVF-Gf-w1b"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gg-X5-jGc">
                                 <rect key="frame" x="81.5" y="239" width="157" height="30"/>
@@ -55,6 +58,9 @@
                                 <state key="normal" title="Forgot your password?">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_recover_password:" destination="Gif-9F-IeI" eventType="touchUpInside" id="BSG-Tr-qeq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLK-3t-Fjl">
                                 <rect key="frame" x="91" y="277" width="138" height="30"/>
@@ -65,6 +71,9 @@
                                 <state key="normal" title="Create new account">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_create_account:" destination="Gif-9F-IeI" eventType="touchUpInside" id="Oij-K4-k4s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,6 +91,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="imz-Tu-xIL"/>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="kUC-CK-yOQ" id="Rgr-4n-tAR"/>
+                        <outlet property="txtPassword" destination="b5u-2V-OyZ" id="A9l-gF-j8m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lD2-dc-GX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
