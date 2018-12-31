@@ -17,6 +17,8 @@
 		08C6AEEE21CA504200C4134F /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6AEED21CA504200C4134F /* Schedule.swift */; };
 		08CDEE4C21C94A3B0048B474 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CDEE4B21C94A3B0048B474 /* Login.storyboard */; };
 		08CDEE5121C94FC60048B474 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDEE5021C94FC60048B474 /* Util.swift */; };
+		08EBCF6321DA23980099A125 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EBCF6221DA23980099A125 /* ScheduleTableViewCell.swift */; };
+		08EBCF6521DA23CA0099A125 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EBCF6421DA23CA0099A125 /* LoginViewController.swift */; };
 		379688174AAFEA3FF404670B /* Pods_EstudoiOsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D7239EC28D5A1B817E0C3A /* Pods_EstudoiOsTests.framework */; };
 		666D1BEDCC0B942F7A63A86F /* Pods_EstudoiOs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F43E4AA4D379C8AA5B876D /* Pods_EstudoiOs.framework */; };
 		CD051E32212EEB932174F0F9 /* Pods_EstudoiOsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6BBF9392AD2E550336CD02 /* Pods_EstudoiOsUITests.framework */; };
@@ -56,6 +58,8 @@
 		08C6AEED21CA504200C4134F /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		08CDEE4B21C94A3B0048B474 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		08CDEE5021C94FC60048B474 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		08EBCF6221DA23980099A125 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		08EBCF6421DA23CA0099A125 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		33B646095B0DD8EC18F5417B /* Pods-EstudoiOs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstudoiOs.release.xcconfig"; path = "Pods/Target Support Files/Pods-EstudoiOs/Pods-EstudoiOs.release.xcconfig"; sourceTree = "<group>"; };
 		41F43E4AA4D379C8AA5B876D /* Pods_EstudoiOs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstudoiOs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B6BBF9392AD2E550336CD02 /* Pods_EstudoiOsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstudoiOsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +124,7 @@
 		0801B0852142A6E9005A3535 /* EstudoiOs */ = {
 			isa = PBXGroup;
 			children = (
+				08EBCF6121DA236C0099A125 /* TableViewCell */,
 				08C6AEEC21CA501A00C4134F /* Model */,
 				08CDEE4F21C94FB30048B474 /* Util */,
 				08CDEE4E21C94D4E0048B474 /* ViewController */,
@@ -171,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				0801B0882142A6EA005A3535 /* ViewController.swift */,
+				08EBCF6421DA23CA0099A125 /* LoginViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -181,6 +187,14 @@
 				08CDEE5021C94FC60048B474 /* Util.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		08EBCF6121DA236C0099A125 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				08EBCF6221DA23980099A125 /* ScheduleTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		1171C2EFC3B0C53FACBB715D /* Pods */ = {
@@ -438,7 +452,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08EBCF6521DA23CA0099A125 /* LoginViewController.swift in Sources */,
 				0801B0892142A6EA005A3535 /* ViewController.swift in Sources */,
+				08EBCF6321DA23980099A125 /* ScheduleTableViewCell.swift in Sources */,
 				08CDEE5121C94FC60048B474 /* Util.swift in Sources */,
 				08C6AEEE21CA504200C4134F /* Schedule.swift in Sources */,
 				0801B0872142A6EA005A3535 /* AppDelegate.swift in Sources */,

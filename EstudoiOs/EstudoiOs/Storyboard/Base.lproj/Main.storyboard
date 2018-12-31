@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--View Controller-->
         <scene sceneID="E6V-sh-jJP">
             <objects>
-                <tableViewController storyboardIdentifier="MainStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JVc-BF-1y7" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MainStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JVc-BF-1y7" customClass="ViewController" customModule="EstudoiOs" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e4g-bR-Cql">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="E7q-EG-6Hu" customClass="ViewController" customModule="EstudoiOs" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleCell" id="E7q-EG-6Hu" customClass="ScheduleTableViewCell" customModule="EstudoiOs" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E7q-EG-6Hu" id="Nhn-Ci-aVl">
@@ -35,7 +35,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="txt_schedule_id" destination="jH3-WY-zby" id="vey-oG-CYh"/>
+                                    <outlet property="txt_schedule_id" destination="jH3-WY-zby" id="Ai4-9w-sHO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -44,6 +44,9 @@
                             <outlet property="delegate" destination="JVc-BF-1y7" id="1cr-q8-uRn"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="schedule_tableview" destination="e4g-bR-Cql" id="kIy-nb-cmr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qua-0t-3yf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
