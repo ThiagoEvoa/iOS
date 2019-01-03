@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var schedule_tableview: UITableView!
     
-    let schedule1 = Schedule(_id: "1", date: "1", initialTime: "1", finalTime: "1", clientId: "1", professionalId: "1")
-    lazy var schedules = [schedule1]
+    lazy var schedules: [Schedule] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        schedule_tableview.dataSource = self
+        schedule_tableview.delegate = self
+        
+        retrieveSchedules(params: [:])
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,6 +33,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.txt_schedule_id.text = schedules[indexPath.row]._id
         
         return cell
+    }
+    
+    private func retrieveSchedules(params: [String: String]){
+        Alamofire.request("https://study-node-mongodb.herokuapp.com/api/schedule", method: .get, parameters: params).responseJSON{
+            response in
+            if response.result.isSuccess{
+                let json = JSON(response.result.value!)
+                for item in json{
+                    let schedule = Schedule(_id: item.1["_id"].string!, date: item.1["date"].string!, initialTime: item.1["initialTime"].string!, finalTime: item.1["finalTime"].string!, clientId: item.1["clientId"].string!, professionalId: item.1["professionalId"].string!)
+                    let newIndexPath = IndexPath(row: self.schedules.count, section: 0)
+                    self.schedules.append(schedule)
+                    self.schedule_tableview.insertRows(at: [newIndexPath], with: .automatic)
+                }
+            }else{
+                print("Error: \(response.result.error!)")
+            }
+        }
     }
 }
 
