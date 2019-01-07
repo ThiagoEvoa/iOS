@@ -46,11 +46,20 @@
                     </tableView>
                     <connections>
                         <outlet property="schedule_tableview" destination="e4g-bR-Cql" id="kIy-nb-cmr"/>
+                        <segue destination="u7M-wB-NIe" kind="show" identifier="FromSchedulesToSchedule" id="zBk-Kz-puR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qua-0t-3yf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="262.5" y="132.5"/>
+        </scene>
+        <!--ScheduleStoryboard-->
+        <scene sceneID="ysf-DB-dbb">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ScheduleStoryboard" storyboardName="ScheduleStoryboard" referencedIdentifier="ScheduleStoryboard" id="u7M-wB-NIe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KW7-hC-gN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="-36"/>
         </scene>
     </scenes>
 </document>

@@ -14,12 +14,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var schedule_tableview: UITableView!
     
     lazy var schedules: [Schedule] = []
+    var schedule: Schedule?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         schedule_tableview.dataSource = self
         schedule_tableview.delegate = self
-        
         retrieveSchedules(params: [:])
     }
     
@@ -29,10 +29,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = schedule_tableview.dequeueReusableCell(withIdentifier: "scheduleCell") as! ScheduleTableViewCell
-        
         cell.txt_schedule_id.text = schedules[indexPath.row]._id
-        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.schedule = self.schedules[indexPath.row]
+        self.performSegue(withIdentifier: "FromSchedulesToSchedule", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ScheduleViewController{
+            destination.receivedData = self.schedule
+        }
     }
     
     private func retrieveSchedules(params: [String: String]){
