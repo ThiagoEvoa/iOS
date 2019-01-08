@@ -29,7 +29,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = schedule_tableview.dequeueReusableCell(withIdentifier: "scheduleCell") as! ScheduleTableViewCell
-        cell.txt_schedule_id.text = schedules[indexPath.row]._id
+        cell.label_datetime.text = schedules[indexPath.row].date
+        cell.label_initial_time.text = schedules[indexPath.row].initialTime
+        cell.label_final_time.text = schedules[indexPath.row].finalTime
+        cell.label_professional_id.text = schedules[indexPath.row].professionalId
+        cell.label_client_id.text = schedules[indexPath.row].clientId
         return cell
     }
     
