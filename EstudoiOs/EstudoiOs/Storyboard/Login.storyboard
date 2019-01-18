@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gif-9F-IeI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="qq6-KH-9Xr">
             <objects>
-                <viewController storyboardIdentifier="LoginStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gif-9F-IeI" customClass="ViewController" customModule="EstudoiOs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gif-9F-IeI" customClass="LoginViewController" customModule="EstudoiOs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T2O-W4-9qN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,14 +91,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="imz-Tu-xIL"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Login" id="rTY-gq-dvO"/>
                     <connections>
                         <outlet property="txtEmail" destination="kUC-CK-yOQ" id="Rgr-4n-tAR"/>
                         <outlet property="txtPassword" destination="b5u-2V-OyZ" id="A9l-gF-j8m"/>
+                        <segue destination="ngH-qQ-7zd" kind="show" identifier="FromLoginToMain" id="f3f-4j-Y6j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lD2-dc-GX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13.125" y="15"/>
+            <point key="canvasLocation" x="1791" y="15"/>
+        </scene>
+        <!--MainStoryboard-->
+        <scene sceneID="9yS-dZ-YhD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MainStoryboard" storyboardName="Main" referencedIdentifier="MainStoryboard" id="ngH-qQ-7zd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Bv-vS-BLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2477" y="15"/>
         </scene>
     </scenes>
 </document>

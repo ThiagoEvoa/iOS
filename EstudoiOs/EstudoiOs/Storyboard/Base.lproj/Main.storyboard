@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JVc-BF-1y7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GUn-jv-930">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="3Gg-Wh-H9O">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GUn-jv-930" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TOk-G8-Mk1">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JVc-BF-1y7" kind="relationship" relationship="rootViewController" id="pmY-VS-Cc4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9TB-aL-2Es" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3202" y="129"/>
+        </scene>
+        <!--Schedules-->
         <scene sceneID="E6V-sh-jJP">
             <objects>
                 <tableViewController storyboardIdentifier="MainStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JVc-BF-1y7" customClass="ViewController" customModule="EstudoiOs" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,6 +129,9 @@
                             <outlet property="delegate" destination="JVc-BF-1y7" id="1cr-q8-uRn"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Schedules" id="F2V-bS-e7T">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="dwz-v4-M2I"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="schedule_tableview" destination="e4g-bR-Cql" id="kIy-nb-cmr"/>
                         <segue destination="u7M-wB-NIe" kind="show" identifier="FromSchedulesToSchedule" id="zBk-Kz-puR"/>
@@ -120,7 +139,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qua-0t-3yf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="262.5" y="132.5"/>
+            <point key="canvasLocation" x="4024" y="129"/>
         </scene>
         <!--ScheduleStoryboard-->
         <scene sceneID="ysf-DB-dbb">
@@ -128,7 +147,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="ScheduleStoryboard" storyboardName="ScheduleStoryboard" referencedIdentifier="ScheduleStoryboard" id="u7M-wB-NIe" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KW7-hC-gN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898" y="-36"/>
+            <point key="canvasLocation" x="4707" y="129"/>
         </scene>
     </scenes>
 </document>

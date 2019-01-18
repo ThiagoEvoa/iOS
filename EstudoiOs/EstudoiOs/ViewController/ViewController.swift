@@ -16,6 +16,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     lazy var schedules: [Schedule] = []
     var schedule: Schedule?
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setToolbarHidden(false, animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         schedule_tableview.dataSource = self
